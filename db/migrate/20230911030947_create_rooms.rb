@@ -1,8 +1,7 @@
-class CreateRooms < ActiveRecord::Migration[7.0]
+class CreateRooms < ActiveRecord::Migration[6.0]
   def change
-    create_table :room_users do |t|
-      t.references :room, null: false, foreign_key: true
-      t.references :user, null: false, foreign_key: true
+    create_table :rooms do |t|
+      t.string :name, null: false
       t.timestamps
     end
   end
